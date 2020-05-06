@@ -1,0 +1,59 @@
+.main {
+  padding: 25px;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  transform: translate(-50%);
+  max-width: 550px;
+  flex-wrap: wrap;
+  background-attachment: fixed;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.main__title {
+  color: #212121;
+  font-size: 80px;
+}
+
+.main__button {
+  overflow: hidden;
+  margin-top: 20px;
+  border: 0;
+  cursor: pointer;
+  background-color: white;
+  padding: 20px 120px;
+  border-radius: 20px;
+  transition: background-color 1s;
+  position: relative;
+}
+
+.main__button::before {
+  content: "Zobacz więcej";
+  position: absolute;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  border-radius: 20px;
+  z-index: 0;
+  height: 100%;
+  background: rgb(9, 162, 109);
+  background: linear-gradient(
+    120deg,
+    rgba(9, 162, 109, 1) 0%,
+    rgba(0, 255, 94, 1) 100%
+  );
+  transition: transform 0.5s;
+}
+
+.main__button:hover::before {
+  transform: translateX(100%);
+}

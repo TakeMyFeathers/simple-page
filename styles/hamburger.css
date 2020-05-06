@@ -1,0 +1,129 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100%);
+}
+
+.navigation__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navigation__item {
+  margin-bottom: 20px;
+}
+
+.navigation__link::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #212121;
+  transition: color, width 0.5s;
+}
+
+.navigation__link:hover::before {
+  width: 100%;
+}
+
+.navigation__link:hover {
+  color: white;
+}
+
+.navigation__link {
+  text-transform: uppercase;
+  color: black;
+  font-size: 40px;
+  text-decoration: none;
+  position: relative;
+}
+
+.hamburger {
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+.hamburger__box {
+  width: 35px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger__inner {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.1s 0.2s ease-in-out;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+
+  content: "";
+  left: 0;
+  transition: transform 0.2s 0.2s ease-in-out;
+  transition: background-color 0.3s 0.3s;
+}
+
+.hamburger__inner::before {
+  top: -10px;
+}
+
+.hamburger__inner::after {
+  top: 10px;
+}
+
+.navigation--active {
+  transform: translateX(0px);
+}
+
+.navigation {
+  transition: transform 1s;
+}
+
+.hamburger--active .hamburger__inner {
+  background-color: transparent;
+}
+
+.hamburger--active .hamburger__inner:before {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger--active .hamburger__inner:after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.hamburger--active body {
+  overflow: hidden;
+}

@@ -1,0 +1,78 @@
+.photos {
+  padding: 20px;
+  align-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 30px;
+  align-items: center;
+  width: 90%;
+  background-attachment: fixed;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.photo {
+  width: 350px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  margin: 15px;
+  text-align: center;
+}
+
+.photo img {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.photo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 350px;
+  height: 250px;
+  filter: grayscale(100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: width 1s;
+}
+
+.photo:hover::before {
+  width: 0;
+}
+
+.photo:nth-child(1)::before {
+  background-image: url("car.jpg");
+}
+
+.photo:nth-child(2)::before {
+  background-image: url("doggy.jpg");
+}
+.photo:nth-child(3)::before {
+  background-image: url("rain.jpg");
+}
+.photo:nth-child(4)::before {
+  background-image: url("rainbow.jpg");
+}
+.photo:nth-child(5)::before {
+  background-image: url("sea.jpg");
+}
+.photo:nth-child(6)::before {
+  background-image: url("moon.jpg");
+}
+.photo:nth-child(7)::before {
+  background-image: url("photo.jpg");
+}
+.photo:nth-child(8)::before {
+  background-image: url("sun.jpg");
+}
+
+.photo__description {
+  display: block;
+  margin-top: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+}

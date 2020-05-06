@@ -1,0 +1,78 @@
+.contact {
+  justify-content: center;
+  align-items: center;
+  min-width: 40%;
+  flex-wrap: wrap;
+  display: flex;
+  height: 40%;
+  background-color: rgba(60, 52, 52, 0.5);
+  background-attachment: fixed;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.contact input {
+  color: #e0e0e0;
+  border: 0;
+  border-bottom: 2px solid black;
+  padding: 10px;
+  background: transparent;
+  border-radius: 20px;
+  font-size: 20px;
+  /* background-color: gray; */
+  padding: 5px;
+}
+
+.contact__name {
+  color: #e0e0e0;
+  min-width: 48.5%;
+  padding: 5px;
+  margin: 10px;
+}
+
+.contact__lastname {
+  color: #e0e0e0;
+  min-width: 48.5%;
+  padding: 5px;
+  margin: 10px;
+}
+
+.contact__info {
+  color: #e0e0e0;
+  width: 100%;
+  display: flex;
+}
+
+.contact__title {
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+}
+
+.contact__message {
+  color: #e0e0e0;
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid black;
+  background: transparent;
+  height: 300px;
+  border-radius: 20px;
+  /* background-color: gray; */
+}
+
+*::placeholder {
+  color: #e0e0e0;
+  font-size: 15px;
+}
+
+.contact__button {
+  position: relative;
+  width: 40%;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-top: 20px;
+}

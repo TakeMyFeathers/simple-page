@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Lato";
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  background-image: url("forest.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header__heading {
+  margin: 10px 0;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.header__heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  width: 50%;
+  height: 3px;
+  background-color: black;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 10%;
+}
+
+.fixed {
+  overflow: hidden;
+}
